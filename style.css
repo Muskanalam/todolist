@@ -1,0 +1,194 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-theme {
+    background-color: #f4f4f4;
+    color: #0e0e0e;
+}
+
+body.light-theme .container {
+    background-color: #ffffff;
+}
+
+body.light-theme input[type="text"],
+body.light-theme li {
+    background-color: #f4f4f4;
+    color: #181916;
+    border: 1px solid #ddd;
+}
+
+body.light-theme button {
+    background-color: #007bff;
+}
+
+body.light-theme button:hover {
+    background-color: #0056b3;
+}
+
+body.light-theme li .remove-btn,
+body.light-theme li .up-btn,
+body.light-theme li .down-btn {
+    background-color: #dc3545;
+}
+
+body.light-theme li .remove-btn:hover,
+body.light-theme li .up-btn:hover,
+body.light-theme li .down-btn:hover {
+    background-color: #c82333;
+}
+
+body.dark-theme {
+    background-color: #270562;
+    color: #ffffff;
+}
+
+body.dark-theme .container {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme li {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+body.dark-theme button {
+    background-color: #6200ea;
+}
+
+body.dark-theme button:hover {
+    background-color: #3700b3;
+}
+
+body.dark-theme li .remove-btn,
+body.dark-theme li .up-btn,
+body.dark-theme li .down-btn {
+    background-color: #b00020;
+}
+
+body.dark-theme li .remove-btn:hover,
+body.dark-theme li .up-btn:hover,
+body.dark-theme li .down-btn:hover {
+    background-color: #7b0016;
+}
+
+.container {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button i {
+    font-size: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+li span {
+    flex-grow: 1;
+}
+
+li button {
+    margin-left: 5px;
+}
+
+li .remove-btn,
+li .up-btn,
+li .down-btn {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+li .up-btn,
+li .down-btn {
+    background-color: #007bff;
+}
+
+li .up-btn:hover,
+li .down-btn:hover {
+    background-color: #0056b3;
+}
+
+li .remove-btn {
+    background-color: #dc3545;
+}
+
+li .remove-btn:hover {
+    background-color: #c82333;
+}
